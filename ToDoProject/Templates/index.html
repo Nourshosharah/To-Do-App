@@ -1,0 +1,15 @@
+{% extends 'share.html' %}
+{% block title %}
+	add
+{% endblock title %}
+
+
+{% block body%}
+<form  method="post">
+	{% csrf_token %}
+	{{form}}
+
+	<input type="submit" value="add">
+</form>
+	
+{% endblock body%}

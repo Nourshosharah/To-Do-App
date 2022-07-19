@@ -1,0 +1,32 @@
+{% extends 'share.html' %}
+{% block title %}
+	edit
+{% endblock title %}
+
+
+{% block body%}
+
+	{% for todo in all_to_do %}
+	<div class="row">
+		<div class="col-md-6" style="margin:0 auto;">
+			<div class="card container-fluid" style="margin-top: 1rem;">
+				<div class="card-body">
+				  <p class="card-text">{{todo.text}}</p>
+				  <p class="card-text">{{todo.date}}</p>
+				  
+	
+	<!-- <li>{{todo.text}}</li> -->
+	<a href="/delete_item/{{todo.id}}" class="btn btn-danger">Delete</a>
+    <a href="/edit/{{todo.id}}" class="btn btn-warning">Edit</a>
+	
+     
+
+<!-- <form action="/delete_item/{{todo.id}}/" method = "post">{% csrf_token %}
+  <input type="submit" value="Delete"> -->
+
+
+
+  
+
+  {% endfor %}
+{% endblock body%}
